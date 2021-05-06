@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=MusicLibraryClient
+comment0.text=\r\n\ Creates\ and\ interacts\ music\ library\ that\ holds\ multiple\ albums\ inside\ of\ it.\r\n\r\n\ @author\ Jason\ Chitwood\r\n\ @version\ 1.3\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2
