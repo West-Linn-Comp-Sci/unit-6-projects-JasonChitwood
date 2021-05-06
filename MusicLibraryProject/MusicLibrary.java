@@ -1,14 +1,14 @@
 
 /**
- * Write a description of class MusicLibrary here.
+ * The MusicLibrary creates a array of albums that can be dynamically removed, added, sorted, and searched.
  *
  * @author Jason Chitwood
- * @version 1.7
+ * @version 2.0
  */
 import java.util.*;
 public class MusicLibrary
 {
-    private Album[] albumList;
+    private Album[] albumList;  //initializes blank library and other variables
     private int songCount;
     private int albumCount;
     private double totalPlaytime;
@@ -16,7 +16,7 @@ public class MusicLibrary
     private int nullPlace;
     private int sortCount;
     private int search;
-    public MusicLibrary()
+    public MusicLibrary() //creates new music library
     {
          albumList = new Album[10];
          songCount = 0;
@@ -24,71 +24,71 @@ public class MusicLibrary
          totalPlaytime = 0;
          listLength = 10;
     }
-    public void add(Album a)
+    public void add(Album a) //adds a new album to the array
     {
         if (albumCount < listLength)
         {
             nullPlace = albumCount;
             for(int i = 0; i < listLength; i++)
             {
-                if(albumList[i] == null)
+                if(albumList[i] == null)            //searches for a null place to fill before adding to the end of the array
                 {
                     nullPlace = i;
                     break;
                 }
             }
             albumList[nullPlace] = a;
-            totalPlaytime += a.getPlaytime();
+            totalPlaytime += a.getPlaytime(); //adjusts variables
             albumCount ++;
             songCount += a.getTrackNum();
             sortCount = 0;
         } else {
-            System.out.println("Cannot add Album, Library full.");
+            System.out.println("Cannot add Album, Library full."); //prints error due to lack of space
         }
     }
-    public void remove(int a)
+    public void remove(int a) //removes an album from the array
     {
         if (albumList[a] == null)
         {
-           System.out.println("Slot Already Empty");
+           System.out.println("Slot Already Empty"); //if the slot is already empty, does not try to remove it
         } else {
-           totalPlaytime -= albumList[a].getPlaytime();
+           totalPlaytime -= albumList[a].getPlaytime(); //adjusts variables
            songCount -= albumList[a].getTrackNum();
-           albumList[a] = albumList[albumCount - 1];
+           albumList[a] = albumList[albumCount - 1];    //moves last album in list to empty space created
            albumList[albumCount - 1] = null;
            sortCount = 0;
            albumCount --;
         }
     }
-    public void doubleSize()
+    public void doubleSize() //doubles the size of the array
     {
-        Album[] albumListTemp = new Album[listLength*2];
-        for(int i = 0; i < listLength; i++)
+        Album[] albumListTemp = new Album[listLength*2]; //creates new array with twice the length
+        for(int i = 0; i < listLength; i++)              //copies the old array
         {
             albumListTemp[i] = albumList[i];
         }
         listLength *= 2;
-        albumList = albumListTemp;
+        albumList = albumListTemp;      //sets old array to new array with longer length
     }
-    public String getAlbum(int a)
+    public String getAlbum(int a) //returns the whole album of an index
     {
-        if (a >= 0 && a <= listLength)
+        if (a >= 0 && a < albumCount)
         {
             return (albumList[a].toString());
         } else {
             return "Cannot retreive Album: Does Not Exist";
         }
     }
-    public String getAlbumName(int a)
+    public String getAlbumName(int a) //returns album name of an index
     {
-        if (a >= 0 && a <= listLength)
+        if (a >= 0 && a < albumCount)
         {
             return albumList[a].getAlbumName();
         } else {
             return "Cannot retreive Album Name: Does Not Exist";
         }
     }
-    public String getArtist(int a)
+    public String getArtist(int a) //returns artist of an index
     {
         if (a >= 0 && a <= listLength)
         {
@@ -97,7 +97,7 @@ public class MusicLibrary
             return "Cannot retreive Artist: Does Not Exist";
         }
     }
-    public void titleSort()
+    public void titleSort() //sorts the array by title
     {
         sortCount++;
         int min; 
@@ -113,11 +113,11 @@ public class MusicLibrary
                 }
             }
             temp = albumList[min];
-            albumList[min] = albumList[i];
+            albumList[min] = albumList[i]; //temp arrays to allow movement
             albumList[i] = temp;
         }
     }
-    public void artistSort()
+    public void artistSort() //sorts the array by artist
     {
         sortCount++;
         for (int i = 1; i < albumCount; i++)
@@ -133,7 +133,7 @@ public class MusicLibrary
             albumList[position] = temp;
         }
     }
-    public int searchTitle(String title)
+    public int searchTitle(String title) //searches the array for a specific title
     {
         for(int i = 0; i < albumCount; i++)
         {
@@ -144,12 +144,12 @@ public class MusicLibrary
            }
         }
         if (title.toUpperCase().equals(albumList[search].getAlbumName())){
-            return search;
+            return search;  //returns index
         } else {
-            return -1;
+            return -1;      //returns invalid index
         }
     }
-    public int searchArtist(String artist)
+    public int searchArtist(String artist) //searches the array for a specific artist
     {
         for(int i = 0; i < albumCount; i++)
         {
@@ -160,19 +160,19 @@ public class MusicLibrary
            }
         }
         if (artist.toUpperCase().equals(albumList[search].getArtist())){
-            return search;
+            return search;  //returns index
         } else {
-            return -1;
+            return -1;      //returns invalid index
         }
     }
-    public int searchBinary(String title, String artist)
+    public int searchBinary(String title, String artist) //searches the array for an album using the title and the artist
     {
-        if(sortCount > 0)
+        if(sortCount > 0) //makes sure it has already been sorted
         {
             int low = 0, high = albumCount - 1, middle = (low + high)/2;
             while((!title.toUpperCase().equals(albumList[middle].getAlbumName()) && !artist.toUpperCase().equals(albumList[middle].getArtist())) && low <= high)
             {
-                if (albumList[middle].getAlbumName().compareTo(title.toUpperCase()) > 0 && albumList[middle].getArtist().compareTo(artist.toUpperCase()) > 0){ //--
+                if (albumList[middle].getAlbumName().compareTo(title.toUpperCase()) > 0 && albumList[middle].getArtist().compareTo(artist.toUpperCase()) > 0){
                     high = middle - 1;
                 } else {
                     low = middle + 1;
@@ -180,16 +180,16 @@ public class MusicLibrary
                 middle = (low + high)/2;
             }
             if (albumList[middle].getAlbumName().equals(title.toUpperCase()) && albumList[middle].getArtist().equals(artist.toUpperCase())){
-                return middle; 
+                return middle;  //returns index
             } else {
-                return -1;
+                return -1;      //returns invalid index
             }
         } else {
             System.out.println("Cannot Search: Must Sort First.");
             return -1;
         }
     }
-    public String toString()
+    public String toString() //returns library data and all album data seperately
     {
         String output = "\nNumber of Albums in Library: " + albumCount + "/" + listLength 
                         + "\nNumber of Tracks in Library: " + songCount 

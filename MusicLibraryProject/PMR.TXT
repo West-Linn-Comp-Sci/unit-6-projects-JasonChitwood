@@ -1,0 +1,24 @@
+------------------------------------------------------------------------
+This is the project PMR file:
+------------------------------------------------------------------------
+
+PROJECT TITLE: MusicLibrary
+PURPOSE OF PROJECT: To practice coding using the arrays, specifically
+                    arrays with objects, and learning how to sort, 
+                    search and call all of the data inside.
+VERSION or DATE: 5/5/2021
+AUTHORS: Jason Chitwood
+
+------------------------------------------------------------------------
+Positives: 
+    Refreshed my memory on certain string interactions in java.
+    
+Negatives:
+    I had to look 95% of everything I did, as we did not go over string
+    or object interactions with arrays in class so I had to figure out
+    how they worked seperatly.
+
+Neutrals:
+    I went through a lot of iterations due to what errors I had, and if
+    i came up with a new idea randomly.
+------------------------------------------------------------------------
