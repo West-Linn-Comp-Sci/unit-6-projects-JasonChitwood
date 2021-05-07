@@ -7,27 +7,23 @@
  */
 public class Battleship1D
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Battleship1D
-     */
-    public Battleship1D()
+    private int size;
+    private int health;
+    public Battleship1D(int a)
     {
-        // initialise instance variables
-        x = 0;
+        size = a;
+        health = a;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    public void hit()
     {
-        // put your code here
-        return x + y;
+        health --;
+    }
+    public boolean placement()
+    {
+        return true;
+    }
+    public int health()
+    {
+        return health;
     }
 }
