@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Battleship1DBoard
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Battleship1DBoard\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=a
 comment1.target=Battleship1DBoard(int)
 comment2.params=type\ place\ direction
@@ -8,5 +7,9 @@ comment2.target=void\ placeShip(int,\ int,\ java.lang.String)
 comment3.params=type
 comment3.target=void\ randomPlaceShip(int)
 comment4.params=a
-comment4.target=java.lang.String\ shoot(int)
-numComments=5
+comment4.target=int\ getHealth(int)
+comment5.params=a
+comment5.target=java.lang.String\ shoot(java.lang.Integer)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7
