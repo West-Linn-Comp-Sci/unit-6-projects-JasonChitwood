@@ -19,7 +19,7 @@ public class Battleship1DBoard
     {
         battleBoard = new Battleship1D[a];
     }
-    public void placeShip(int type, int place, String direction)
+    public void placeShip(int type, int place, String direction) //have it check if it goes on top of another ship with if slot equalls null
     {
         int placementCounter = 0;
         if(type == 5 && count5 != 0){
@@ -27,34 +27,24 @@ public class Battleship1DBoard
             while (true){
                 placementCounter++;
                 if (direction.toUpperCase().equals("RIGHT")){
-                    if (place + 5 < battleBoard.length){//fit right
+                    if (place + 5 < battleBoard.length){
                         for(int i = place + 5; i > place; i--){
                             battleBoard[i] = length5;
                         }
                         break;
-                    }/* else if(place - 5 > 0){//fit left comment out here, add to other
-                        for(int i = place - 5; i < place; i++){
-                            battleBoard[i] = length5;
-                        }
-                        break;
-                    } */else {
+                    }else {
                         if (placementCounter == 20){
                             System.out.println("Could not place.");
                             break;
                         }
                     }
                 } else if (direction.toUpperCase().equals("LEFT")){
-                    if (place - 5 > 0){//fit left
+                    if (place - 5 > 0){
                         for(int i = place - 5; i < place; i++){
                             battleBoard[i] = length5;
                         }
                         break;
-                    } /*else if(place + 5 < battleBoard.length){//fit right comment out here, add to other
-                        for(int i = place + 5; i > place; i--){
-                            battleBoard[i] = length5;
-                        }
-                        break;
-                    } */else {
+                    }else {
                         if (placementCounter == 20){
                             System.out.println("Could not place.");
                             break;
