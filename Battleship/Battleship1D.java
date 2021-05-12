@@ -2,8 +2,8 @@
 /**
  * Write a description of class Battleship1D here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Jason Chitwood
+ * @version 1.5
  */
 public class Battleship1D
 {

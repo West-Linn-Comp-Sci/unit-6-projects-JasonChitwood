@@ -2,8 +2,8 @@
 /**
  * Write a description of class Battleship1DBoard here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Jason Chitwood
+ * @version 1.8
  */
 import java.util.*;
 public class Battleship1DBoard
@@ -363,6 +363,27 @@ public class Battleship1DBoard
             return "Miss";
         }
     }
+    public String randShoot()//add if already on either list cannot guess again
+    {
+        Integer a = (int)(Math.random() * (battleBoard.length - 1));
+        if (hitGuess.contains(a) || missGuess.contains(a)){
+            return "Already Guessed, try again";
+        }else if(battleBoard[a] == null){
+            missGuess.add(a);
+            return "Miss";
+        }else if (battleBoard[a].placement() == true && battleBoard[a].health() > 1){
+            hitGuess.add(a);
+            battleBoard[a].hit();
+            return "Hit"; 
+        } else if(battleBoard[a].placement() == true && battleBoard[a].health() == 1){
+            hitGuess.add(a);
+            battleBoard[a].hit();
+            return "Sunk";
+        } else {
+            missGuess.add(a);
+            return "Miss";
+        }
+    }
     public String toString()//need to figure out printing miss (figure out health not messing with print)
     {
         String boardPrint = "";
@@ -376,7 +397,7 @@ public class Battleship1DBoard
             } else if(hitGuess.contains(i) && battleBoard[i].health() == 0){//battleBoard[i].placement() == true && (battleBoard[i].health()
                 boardPrint += "#";
             } else {
-                boardPrint += "O";
+                boardPrint += "0";
             }
         }
         return boardPrint;

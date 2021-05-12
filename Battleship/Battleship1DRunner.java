@@ -2,8 +2,8 @@
 /**
  * Write a description of class Battleship1DRunner here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Jason Chitwood
+ * @version 1.5
  */
 public class Battleship1DRunner
 {
@@ -12,6 +12,10 @@ public class Battleship1DRunner
         Battleship1DBoard board = new Battleship1DBoard(7);
         //board.placeShip(5, 1, "right");
         board.randomPlaceShip(2);
+        /*System.out.println(board.randShoot());
+        System.out.println(board.randShoot());
+        System.out.println(board.randShoot());
+        System.out.println(board.randShoot());*/
         System.out.println(board.shoot(2));
         System.out.println(board.shoot(0));
         System.out.println(board.shoot(1));
