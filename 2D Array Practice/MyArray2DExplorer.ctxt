@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=MyArray2DExplorer
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ sdgf\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment10.params=nums
+comment10.target=int\ biggestRow(int[][])
+comment2.params=nums
+comment2.target=int[]\ minInRow(int[][])
+comment3.params=nums\ col
+comment3.target=boolean\ oddColSum(int[][],\ int)
+comment4.params=mat\ row
+comment4.target=boolean\ evenRow(int[][],\ int)
+comment5.params=nums\ row
+comment5.target=int\ minRow(int[][],\ int)
+comment6.params=matrix
+comment6.target=int[]\ colMaxs(int[][])
+comment7.params=data
+comment7.target=int[]\ allRowSums(int[][])
+comment8.params=nums
+comment8.target=double[]\ averageCol(int[][])
+comment9.params=matrix
+comment9.target=int\ smallEven(int[][])
+numComments=11
