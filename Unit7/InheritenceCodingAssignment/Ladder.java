@@ -5,7 +5,7 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Ladder //compare if ladders are simmilar, add equals 
+public class Ladder //comparable interface vs compare to method??
 {
     protected int rungs;
     protected int length;

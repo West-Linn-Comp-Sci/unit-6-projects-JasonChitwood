@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Manager
+comment1.params=name\ age
+comment1.target=Manager(java.lang.String,\ int)
+comment2.params=
+comment2.target=BurgerByte\ getManagingBranch()
+comment3.params=
+comment3.target=java.util.List\ getTeam()
+numComments=4
