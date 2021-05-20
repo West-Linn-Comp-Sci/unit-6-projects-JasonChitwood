@@ -8,7 +8,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class BurgerByte extends Employee{
+public class BurgerByte{
     protected String location;
     protected Manager manager;    
     protected List<Employee> staff;
@@ -52,54 +52,4 @@ public class BurgerByte extends Employee{
         }
         System.out.println("Name: " + manager.getName() +", Salary: " + manager.computeWage());
     }
-
-
-    // getters
-    
-    /*public List<Cashier> getCashiers() { return cashiers; }
-    public List<FryCook> getFryCooks() { return fryCooks; }*/
-    
-
-    // EFFECTS: "opens" this restaurant, i.e. set isOpen to true
-    
-    // EFFECTS: sets the isOpen field to false, and sends all employees home (off work)
-    
-
-    // REQUIRES: c must not be in this cashiers or this BurgerByte's Manager's cashiers
-    // MODIFIES: this
-    // EFFECTS: adds the given cashier to this cashiers
-    /*public void addCashier(Cashier c) {
-        cashiers.add(c);
-    }*/
-    
-    
-
-    // REQUIRES: c must be in this cashiers and this BurgerByte's Manager's cashiers
-    // MODIFIES: this
-    // EFFECTS: removes the given cashier from this cashiers
-    /*public void removeCashier(Cashier c) {
-        cashiers.remove(c);
-    }*/
-
-    // REQUIRES: fc must not be in this frycooks or this BurgerByte's Manager's frycooks
-    // MODIFIES: this
-    // EFFECTS: adds the given cashier to this cashiers
-    /*public void addFryCook(FryCook fc) {
-        fryCooks.add(fc);
-    }*/
-
-    // REQUIRES: fc must be in this frycooks and this BurgerByte's Manager's frycooks
-    // MODIFIES: this
-    // EFFECTS: removes the given FryCook from this frycooks
-    /*public void removeFrycook(FryCook fc) {
-        fryCooks.remove(fc);
-    }*/
-    
-
-    // EFFECTS: computes wages for all employees, prints them out in this format
-    //          Name: ______, Salary: _______ for each employee
-    
-    /*private List<Cashier> cashiers;
-    private List<FryCook> fryCooks;*/
-
 }

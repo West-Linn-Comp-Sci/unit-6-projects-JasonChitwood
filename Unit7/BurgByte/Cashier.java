@@ -39,36 +39,4 @@ public class Cashier extends Employee{
     public double computeWage() {
         return (hoursWorked * (CASHIER_WAGE + BASE_WAGE));
     }
-
-    /*public static final double BASE_WAGE = 10.00;*/
-
-    /*private String name;
-    private int age;
-    private double hoursWorked;
-    private boolean atWork;*/
-    // getters
-    /*public String getName() { return name; }
-    public int getAge() { return age; }
-    public double getHoursWorked() { return hoursWorked; }
-    public boolean isAtWork() { return atWork; }*/
-    
-
-    // MODIFIES: this
-    // EFFECTS: adds hours to the hoursWorked field
-    /*private void logHoursWorked(double hours) {
-        hoursWorked += hours;
-    }*/
-
-    // EFFECTS: sets isRegisterOpen to true, and updates atWork to reflect that this Cashier is
-    //          now at work
-    
-
-    // EFFECTS: sets isRegisterOpen to false and updates atWork to reflect that this Cashier is
-    //          no longer at work
-    
-
-    // EFFECTS: computes wages for the day
-    
-
-
 }

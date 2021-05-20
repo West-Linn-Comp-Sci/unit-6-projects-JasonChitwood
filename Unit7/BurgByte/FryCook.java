@@ -36,31 +36,4 @@ public class FryCook extends Employee{
     public double computeWage() {
         return (hoursWorked * (FRYCOOK_WAGE + BASE_WAGE));
     }
-    /*private String name;
-    private int age;
-    private double hoursWorked;
-    private boolean atWork;*/
-    // getters
-    /*public String getName() { return name; }
-    public int getAge() { return age; }
-    public boolean isAtWork() { return atWork; }*/
-    
-
-    // MODIFIES: this
-    // EFFECTS: adds hours to the hoursWorked field
-    /*private void logHoursWorked(double hours) {
-        hoursWorked += hours;
-    }*/
-
-    // EFFECTS: the grill should be ready to go, hours should be logged, and
-    //          the atWork field should be updated to reflect this FryCook's status
-    
-
-    // EFFECTS: close the grill for the day, and update this FryCook's work status
-    
-
-    // EFFECTS: computes wages for the day
-    
-
-
 }

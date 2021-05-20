@@ -24,7 +24,7 @@ public abstract class Employee
     public double getHoursWorked() { 
         return hoursWorked; 
     }
-    private void logHoursWorked(double hours) {
+    public void logHoursWorked(double hours) {
         hoursWorked += hours;
     }
     public void startWork(double hours) {
