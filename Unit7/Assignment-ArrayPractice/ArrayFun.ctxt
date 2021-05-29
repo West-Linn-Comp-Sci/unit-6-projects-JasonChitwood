@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ArrayFun
+comment1.params=arr
+comment1.target=ArrayFun(int[])
+comment2.params=
+comment2.target=int[]\ getNums()
+comment3.params=
+comment3.target=int[]\ getMixedNums()
+comment4.params=in
+comment4.target=void\ arrayMixup(int[])
+comment5.params=
+comment5.target=int\ greatestDiff()
+numComments=6
