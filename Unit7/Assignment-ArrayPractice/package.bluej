@@ -2,10 +2,10 @@
 dependency1.from=ArrayFunTester
 dependency1.to=ArrayFun
 dependency1.type=UsesDependency
-editor.fx.0.height=1126
-editor.fx.0.width=2062
-editor.fx.0.x=-7
-editor.fx.0.y=-7
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
 objectbench.height=96
 objectbench.width=761
 package.divider.horizontal=0.6
