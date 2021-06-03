@@ -11,11 +11,17 @@ public class Homework
 {
     public static void main(String[] args){
         ImageIcon icon = new ImageIcon("cowBoy.png");
+        ImageIcon icon2 = new ImageIcon("newestSanta.png");
         
         JLabel label = new JLabel();
         label.setIcon(icon);
         label.setVerticalAlignment(JLabel.CENTER);
         label.setHorizontalAlignment(JLabel.CENTER);
+        
+        JLabel label2 = new JLabel();
+        label2.setIcon(icon2);
+        label2.setVerticalAlignment(JLabel.CENTER);
+        label2.setHorizontalAlignment(JLabel.CENTER);
         
         JPanel tlPanel = new JPanel();
         tlPanel.setBackground(new Color(70, 75, 215));
@@ -41,17 +47,18 @@ public class Homework
         blPanel.setBackground(Color.red);
         blPanel.setBounds(0,600,500,300); //x,y,width,height
         blPanel.setLayout(new BorderLayout());
+        blPanel.add(label);
         
         JPanel bmPanel = new JPanel();
         bmPanel.setBackground(Color.pink);
         bmPanel.setBounds(500,600,500,300);
         bmPanel.setLayout(new BorderLayout());
-        bmPanel.add(label);
         
         JPanel brPanel = new JPanel();
         brPanel.setBackground(Color.yellow);
         brPanel.setBounds(1000,600,500,300);
         brPanel.setLayout(new BorderLayout());
+        brPanel.add(label2);
         
         JFrame frame = new JFrame();
         frame.setTitle("Big Panel");
