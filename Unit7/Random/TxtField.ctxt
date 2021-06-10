@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=TxtField
+comment0.text=\r\n\ Create\ a\ GUI\ textBox\ component\ that\ can\ add,\ set,\ or\ get\ text.\r\n
+comment1.params=
+comment1.target=TxtField()
+comment2.params=e
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+numComments=3

@@ -19,7 +19,7 @@ public class Battleship1DBoard
     {
         battleBoard = new Battleship1D[a];
     }
-    public void placeShip(int type, int place, String direction) //have it check if it goes on top of another ship with if slot equalls null
+    /*public void placeShip(int type, int place, String direction) //have it check if it goes on top of another ship with if slot equalls null
     {
         int placementCounter = 0;
         if(type == 5 && count5 != 0){
@@ -157,7 +157,7 @@ public class Battleship1DBoard
         } else {
             System.out.println("Cannot place: Ship Error");
         }
-    }
+    }*/
     public void randomPlaceShip(int type)
     {
         int placementCounter = 0;
