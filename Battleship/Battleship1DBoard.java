@@ -343,7 +343,7 @@ public class Battleship1DBoard
     {
         return battleBoard[a].health();
     }
-    public String shoot(Integer a)//add if already on either list cannot guess again
+    /*public String shoot(Integer a)//add if already on either list cannot guess again
     {
         if (hitGuess.contains(a) || missGuess.contains(a)){
             return "Already Guessed, try again";
@@ -361,6 +361,26 @@ public class Battleship1DBoard
         } else {
             missGuess.add(a);
             return "Miss";
+        }
+    }*/
+    public int shoot(Integer a)//add if already on either list cannot guess again
+    {
+        if (hitGuess.contains(a) || missGuess.contains(a)){
+            return 8;//"Already Guessed, try again";
+        }else if(battleBoard[a] == null){
+            missGuess.add(a);
+            return 0;//"Miss";
+        }else if (battleBoard[a].placement() == true && battleBoard[a].health() > 1){
+            hitGuess.add(a);
+            battleBoard[a].hit();
+            return 1;//"Hit"; 
+        } else if(battleBoard[a].placement() == true && battleBoard[a].health() == 1){
+            hitGuess.add(a);
+            battleBoard[a].hit();
+            return 2;//"Sunk";
+        } else {
+            missGuess.add(a);
+            return 0;//"Miss";
         }
     }
     public String randShoot()//add if already on either list cannot guess again
