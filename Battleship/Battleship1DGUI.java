@@ -8,7 +8,7 @@ import java.util.*;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Battleship1DGUI implements ActionListener{
+public class Battleship1DGUI extends JPanel implements ActionListener{
     Battleship1DBoard board = new Battleship1DBoard(7);
     JFrame frame = new JFrame();
     JButton[] buttons = new JButton[7];
@@ -29,7 +29,7 @@ public class Battleship1DGUI implements ActionListener{
             buttons[i] = new JButton();
             buttons[i].setBackground(Color.blue);
             panel.add(buttons[i]);
-            buttons[i].setFont(new Font("MV Boli",Font.BOLD,120));
+            buttons[i].setFont(new Font("Roboto",Font.BOLD,120));
             buttons[i].setFocusable(false);
             buttons[i].addActionListener(this);
         }
@@ -49,7 +49,7 @@ public class Battleship1DGUI implements ActionListener{
         for(int i=0;i<7;i++) {
             if(e.getSource()==buttons[i]) {
                 buttons[i].setEnabled(false);
-                buttons[i].setForeground(Color.blue);
+                //buttons[i].setForeground(Color.blue);
                 guessCount++;
                 int success = board.shoot(i);
                 if (success == 0){

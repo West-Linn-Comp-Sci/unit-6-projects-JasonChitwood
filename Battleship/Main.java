@@ -1,13 +1,13 @@
 
 /**
- * Write a description of class Play2DBattleship here.
+ * Write a description of class ResetButton here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Play2DBattleship
+public class Main
 {
     public static void main(String[] args){
-        new Battleship2DGUI();
+        GameFrame game = new GameFrame();
     }
 }

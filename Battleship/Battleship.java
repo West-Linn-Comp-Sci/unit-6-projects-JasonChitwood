@@ -5,13 +5,13 @@
  * @author Jason Chitwood
  * @version 1.5
  */
-public class Battleship1D
+public class Battleship
 {
     private int size;
     private int health;
     private int maxHealth;
     private int hitCount;
-    public Battleship1D(int a)
+    public Battleship(int a)
     {
         size = a;
         health = a;
